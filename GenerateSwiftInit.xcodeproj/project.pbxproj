@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		CAE1D18F1DB0874700A44510 /* SwiftGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE1D1861DB0874700A44510 /* SwiftGenerator.framework */; };
 		CAE1D1961DB0874700A44510 /* SwiftGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1D1951DB0874700A44510 /* SwiftGeneratorTests.swift */; };
-		CAE1D1981DB0874700A44510 /* SwiftGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = CAE1D1881DB0874700A44510 /* SwiftGenerator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CAE1D1981DB0874700A44510 = {isa = PBXBuildFile; fileRef = CAE1D1881DB0874700A44510 /* SwiftGenerator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CAE1D19B1DB0874700A44510 /* SwiftGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE1D1861DB0874700A44510 /* SwiftGenerator.framework */; };
 		CAE1D19C1DB0874700A44510 /* SwiftGenerator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAE1D1861DB0874700A44510 /* SwiftGenerator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CAE1D1A51DB0877400A44510 /* GenerateInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1D1A41DB0877400A44510 /* GenerateInit.swift */; };
@@ -22,6 +22,7 @@
 		CAE760181D0FAEFF0044F506 /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE760171D0FAEFF0044F506 /* SourceEditorExtension.swift */; };
 		CAE7601A1D0FAEFF0044F506 /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE760191D0FAEFF0044F506 /* SourceEditorCommand.swift */; };
 		CAE7601E1D0FAEFF0044F506 /* Generate Swift Init.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CAE760101D0FAEFF0044F506 /* Generate Swift Init.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DD80485BADB58DCD9E9194F3 /* GenerateSwiftInit-Prefix.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2964BCA9C50136A50E4E353 /* GenerateSwiftInit-Prefix.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5AF34618A9B49A2C345396A0 /* GenerateSwiftInit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GenerateSwiftInit-Bridging-Header.h"; sourceTree = "<group>"; };
+		6D1A48908D9F1E70BC960EEA /* GenerateSwiftInit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GenerateSwiftInit-Prefix.pch"; sourceTree = "<group>"; };
 		CAE1D1861DB0874700A44510 /* SwiftGenerator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftGenerator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAE1D1881DB0874700A44510 /* SwiftGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftGenerator.h; sourceTree = "<group>"; };
 		CAE1D1891DB0874700A44510 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -100,6 +103,7 @@
 		CAE760171D0FAEFF0044F506 /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
 		CAE760191D0FAEFF0044F506 /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
 		CAE7601B1D0FAEFF0044F506 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2964BCA9C50136A50E4E353 /* GenerateSwiftInit-Prefix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GenerateSwiftInit-Prefix.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +170,9 @@
 				CAE1D1941DB0874700A44510 /* SwiftGeneratorTests */,
 				CAE760111D0FAEFF0044F506 /* Frameworks */,
 				CAE75FFB1D0FAEF30044F506 /* Products */,
+				6D1A48908D9F1E70BC960EEA /* GenerateSwiftInit-Prefix.pch */,
+				F2964BCA9C50136A50E4E353 /* GenerateSwiftInit-Prefix.swift */,
+				5AF34618A9B49A2C345396A0 /* GenerateSwiftInit-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -222,11 +229,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		CAE1D1831DB0874700A44510 /* Headers */ = {
+		CAE1D1831DB0874700A44510 = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAE1D1981DB0874700A44510 /* SwiftGenerator.h in Headers */,
+				CAE1D1981DB0874700A44510,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,7 +246,7 @@
 			buildPhases = (
 				CAE1D1811DB0874700A44510 /* Sources */,
 				CAE1D1821DB0874700A44510 /* Frameworks */,
-				CAE1D1831DB0874700A44510 /* Headers */,
+				CAE1D1831DB0874700A44510,
 				CAE1D1841DB0874700A44510 /* Resources */,
 			);
 			buildRules = (
@@ -343,7 +350,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CAE75FF51D0FAEF30044F506 /* Build configuration list for PBXProject "GenerateSwiftInit" */;
+			buildConfigurationList = CAE75FF51D0FAEF30044F506 /* Build configuration list for PBXProject "SwiftGenerator" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -420,6 +427,7 @@
 			files = (
 				CAE760001D0FAEF30044F506 /* ViewController.swift in Sources */,
 				CAE75FFE1D0FAEF30044F506 /* AppDelegate.swift in Sources */,
+				DD80485BADB58DCD9E9194F3 /* GenerateSwiftInit-Prefix.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -655,10 +663,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GenerateSwiftInit-Prefix.pch";
 				INFOPLIST_FILE = GenerateSwiftInit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bk.GenerateSwiftInit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GenerateSwiftInit-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -670,10 +681,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GenerateSwiftInit-Prefix.pch";
 				INFOPLIST_FILE = GenerateSwiftInit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bk.GenerateSwiftInit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GenerateSwiftInit-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -731,7 +745,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CAE75FF51D0FAEF30044F506 /* Build configuration list for PBXProject "GenerateSwiftInit" */ = {
+		CAE75FF51D0FAEF30044F506 /* Build configuration list for PBXProject "SwiftGenerator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CAE760071D0FAEF30044F506 /* Debug */,
